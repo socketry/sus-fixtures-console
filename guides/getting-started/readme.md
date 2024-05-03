@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide explains how to use the `Sus::Fixtures::Console` gem to capture console logging output.
+This guide explains how to use the `Sus::Fixtures::Console` gem to redirect console logging output during tests.
 
 ## Installation
 
@@ -55,7 +55,7 @@ end
 In many cases, you may wish to set a default log level that only prints warnings or above:
 
 ``` ruby
-# In your test setup file:
+# In your `sus/config.rb` file:
 require 'console'
 Console.logger.warn!
 ```

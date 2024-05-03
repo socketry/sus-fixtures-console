@@ -1,6 +1,6 @@
 # Sus::Fixtures::Console
 
-Provides a convenient fixture for capturing console logging.
+Provides a convenient fixture for capturing or ignoring [console](https://github.com/socketry/console) logging.
 
 [![Development Status](https://github.com/socketry/sus-fixtures-console/workflows/Test/badge.svg)](https://github.com/socketry/sus-fixtures-console/actions?workflow=Test)
 
@@ -14,7 +14,7 @@ $ bundle add sus-fixtures-console
 
 Please see the [project documentation](https://ioquatix.github.io/sus-fixtures-console/) for more details.
 
-  - [Getting Started](https://ioquatix.github.io/sus-fixtures-console/guides/getting-started/index) - This guide explains how to use the `Sus::Fixtures::Console` gem to capture console logging output.
+  - [Getting Started](https://ioquatix.github.io/sus-fixtures-console/guides/getting-started/index) - This guide explains how to use the `Sus::Fixtures::Console` gem to redirect console logging output during tests.
 
 ## Contributing
 
