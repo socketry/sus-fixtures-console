@@ -15,10 +15,10 @@ module Sus
 				let(:logger) {::Console::Logger.new(::Console::Output::Null.new)}
 				
 				def around
-					Fiber.new do
-						::Console.logger = logger
-						super
-					end.resume
+					::Console.logger = logger
+					super
+				ensure
+					::Console.logger = nil
 				end
 			end
 		end
