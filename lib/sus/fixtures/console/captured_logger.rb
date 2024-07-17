@@ -12,14 +12,22 @@ module Sus
 	module Fixtures
 		module Console
 			CapturedLogger = Sus::Shared("captured logger") do
-				let(:capture) {::Console::Capture.new}
-				let(:logger) {::Console::Logger.new(capture, level: ::Console::Logger::DEBUG)}
+				let(:console_capture) {::Console::Capture.new}
+				let(:console_logger) {::Console::Logger.new(console_capture, level: ::Console::Logger::DEBUG)}
 				
 				def around
-					::Console.logger = logger
+					::Console.logger = console_logger
 					super
 				ensure
 					::Console.logger = nil
+				end
+				
+				def expect_console
+					expect(console_capture)
+				end
+				
+				def have_logged(**fields)
+					have_value(have_keys(**fields))
 				end
 			end
 		end
