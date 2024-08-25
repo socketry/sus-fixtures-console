@@ -2,7 +2,7 @@
 
 Provides a convenient fixture for capturing or ignoring [console](https://github.com/socketry/console) logging.
 
-[![Development Status](https://github.com/sus-rb/sus-fixtures-console/workflows/Test/badge.svg)](https://github.com/sus-rb/sus-fixtures-console/actions?workflow=Test)
+[![Development Status](https://github.com/socketry/sus-fixtures-console/workflows/Test/badge.svg)](https://github.com/socketry/sus-fixtures-console/actions?workflow=Test)
 
 ## Installation
 
@@ -12,9 +12,9 @@ $ bundle add sus-fixtures-console
 
 ## Usage
 
-Please see the [project documentation](https://sus-rb.github.io/sus-fixtures-console/) for more details.
+Please see the [project documentation](https://socketry.github.io/sus-fixtures-console/) for more details.
 
-  - [Getting Started](https://sus-rb.github.io/sus-fixtures-console/guides/getting-started/index) - This guide explains how to use the `Sus::Fixtures::Console` gem to redirect console logging output during tests.
+  - [Getting Started](https://socketry.github.io/sus-fixtures-console/guides/getting-started/index) - This guide explains how to use the `Sus::Fixtures::Console` gem to redirect console logging output during tests.
 
 ## Contributing
 
