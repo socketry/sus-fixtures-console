@@ -6,7 +6,7 @@
 module Sus
 	module Fixtures
 		module Console
-			VERSION = "0.4.0"
+			VERSION = "0.4.1"
 		end
 	end
 end
