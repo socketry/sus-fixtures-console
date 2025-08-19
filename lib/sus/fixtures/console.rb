@@ -5,6 +5,7 @@
 
 require_relative "console/version"
 require_relative "console/captured_logger"
+require_relative "console/null_logger"
 
 # @namespace
 module Sus
