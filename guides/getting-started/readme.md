@@ -10,6 +10,13 @@ Add the gem to your project:
 $ bundle add sus-fixtures-console
 ```
 
+## Core Concepts
+
+`sus-fixtures-console` provides two main fixtures:
+
+- {ruby Sus::Fixtures::Console::CapturedLogger} - Captures console output for inspection and testing.
+- {ruby Sus::Fixtures::Console::NullLogger} - Suppresses console output to reduce noise during test runs.
+
 ## Usage
 
 ### Capturing Console Output
@@ -23,9 +30,9 @@ describe Sus::Fixtures::Console::CapturedLogger do
 	include_context Sus::Fixtures::Console::CapturedLogger
 	
 	it "should capture output" do
-		Console.logger.debug("Hello, World!")
+		Console.debug("Hello, World!")
 		
-		expect(capture.last).to have_keys(
+		expect(console_capture.last).to have_keys(
 			severity: be == :debug,
 			subject: be == "Hello, World!"
 		)
@@ -50,12 +57,31 @@ describe Sus::Fixtures::Console::NullLogger do
 end
 ```
 
+### Advanced Usage
+
+You can also use the `expect_console` helper method for more fluent test assertions:
+
+``` ruby
+describe Sus::Fixtures::Console::CapturedLogger do
+	include_context Sus::Fixtures::Console::CapturedLogger
+	
+	it "can use expect_console helper" do
+		Console.info("Processing complete")
+		
+		expect_console.to have_logged(
+			severity: be == :info,
+			subject: be == "Processing complete"
+		)
+	end
+end
+```
+
 ### Setting a Default Log Level
 
 In many cases, you may wish to set a default log level that only prints warnings or above:
 
 ``` ruby
-# In your `sus/config.rb` file:
+# In your `config/sus.rb` file:
 require 'console'
 Console.logger.warn!
 ```

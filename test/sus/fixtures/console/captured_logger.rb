@@ -3,7 +3,7 @@
 # Released under the MIT License.
 # Copyright, 2024, by Samuel Williams.
 
-require 'sus/fixtures/console/captured_logger'
+require "sus/fixtures/console/captured_logger"
 
 describe Sus::Fixtures::Console::CapturedLogger do
 	include_context Sus::Fixtures::Console::CapturedLogger
@@ -28,7 +28,7 @@ describe Sus::Fixtures::Console::CapturedLogger do
 		end
 	end
 	
-	with '#have_logged' do
+	with "#have_logged" do
 		it "can expect specific fields to not be logged" do
 			Console.debug("Hello, World!")
 			

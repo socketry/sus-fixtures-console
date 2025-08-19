@@ -16,6 +16,10 @@ Please see the [project documentation](https://socketry.github.io/sus-fixtures-c
 
   - [Getting Started](https://socketry.github.io/sus-fixtures-console/guides/getting-started/index) - This guide explains how to use the `Sus::Fixtures::Console` gem to redirect console logging output during tests.
 
+## Releases
+
+There are no documented releases.
+
 ## Contributing
 
 We welcome contributions to this project.

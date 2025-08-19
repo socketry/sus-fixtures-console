@@ -3,7 +3,7 @@
 # Released under the MIT License.
 # Copyright, 2024, by Samuel Williams.
 
-require 'sus/fixtures/console/null_logger'
+require "sus/fixtures/console/null_logger"
 
 describe Sus::Fixtures::Console::NullLogger do
 	include_context Sus::Fixtures::Console::NullLogger
